@@ -51,6 +51,7 @@ app.use(passport.session());
 app.use(flash());
 
 // pass variables to our templates + all requests
+// NOTE: Concept called middlewear
 app.use((req, res, next) => {
   res.locals.h = helpers;
   res.locals.flashes = req.flash();
